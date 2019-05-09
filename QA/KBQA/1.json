@@ -1,0 +1,28 @@
+{
+  "mappings": {
+    "person": {
+      "properties": {
+        "subj": {
+          "type": "keyword"
+        },
+        "height": {
+          "type": "integer"
+        },
+        "weight": {
+          "type": "integer"
+        },
+        "po": {
+          "type": "nested",
+          "properties": {
+            "pred": {
+              "type": "keyword"
+            },
+            "obj": {
+              "type": "keyword"
+            }
+          }
+        }
+      }
+    }
+  }
+}
