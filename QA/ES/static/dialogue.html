@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>基于 ES qa 问答</title>
+    <script src="http://cdn.bootcss.com/angular.js/1.4.9/angular.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>
+    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.css" rel="stylesheet">
+    <style>
+        .content {
+            font-size: 20px;
+
+            height: 600px;
+            overflow: auto;
+            padding: 2px;
+        }
+
+        .content li {
+            margin-top: 10px;
+            padding-left: 10px;
+            display: block;
+            clear: both;
+            overflow: hidden;
+        }
+
+        .content li img {
+            float: left;
+        }
+
+        .content li span {
+            background: #7cfc00;
+            padding: 10px;
+            border-radius: 10px;
+            float: left;
+            margin: 6px 10px 0 10px;
+            max-width: 310px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 3px #ccc;
+        }
+
+        .content li img.imgleft {
+            float: left;
+        }
+
+        .content li img.imgright {
+            float: right;
+        }
+
+        .content li span.spanleft {
+            float: left;
+            background: #fff;
+        }
+
+        .content li span.spanright {
+            float: right;
+            background: #7cfc00;
+        }
+
+
+    </style>
+    <script src="/static/qa_es.js"></script>
+
+</head>
+<body>
+
+<div class="container" ng-app="myApp1" ng-controller="formCtrl">
+    <br>
+    <div class="row">
+        <div class="col-xs-7">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">es问答机器人</h3>
+                </div>
+                <div class="panel-body">
+                    <form role="form" novalidate>
+
+
+                        <ul id="dialogue" class="content" ng-bind-html="dialogue">
+                            <!-- 欢迎加入qq群：454796847、135430763 -->
+                        </ul>
+
+                        <div class="footer">
+                            <input id="text" type="text" ng-model="text" placeholder="说点什么吧..."
+                                   style="outline: none;font-size: 20px; text-indent: 10px;position: absolute; border-radius: 6px; float: left">
+
+                            <button type="button" id="send" ng-click="getResponse()"
+                                    style="float: right;width: 80px;height: 35px;">
+                                发送
+                            </button>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-5">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">解析结果</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <span id="result" ng-bind-html="result"></span>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>   
