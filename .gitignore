@@ -107,3 +107,4 @@ venv.bak/
 
 .idea/*
 .DS_Store
+QA/ES/*.json
