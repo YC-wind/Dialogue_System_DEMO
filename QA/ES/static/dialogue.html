@@ -56,6 +56,18 @@
             float: right;
             background: #7cfc00;
         }
+        .panel-body #text {
+            display: inline-block;
+            width: 78%;
+            box-sizing: border-box;
+        }
+        .footer {
+            position: relative;
+        }
+        .panel-body #send {
+            display: inline-block;
+            width: 20%;
+        }
 
 
     </style>
@@ -84,7 +96,7 @@
                             <input id="text" type="text" ng-model="text" placeholder="说点什么吧..."
                                    style="outline: none;font-size: 20px; text-indent: 10px;position: absolute; border-radius: 6px; float: left">
 
-                            <button type="button" id="send" ng-click="getResponse()"
+                            <button type="submit" id="send" ng-click="getResponse()"
                                     style="float: right;width: 80px;height: 35px;">
                                 发送
                             </button>
