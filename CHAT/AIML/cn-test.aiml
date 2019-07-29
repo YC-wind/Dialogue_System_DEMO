@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml version="1.0">
+
+<!-- Free software (c) 2017 yalei -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License -->
+<!-- as published by the Free Software Foundation. -->
+
+<meta name="author" content="Yalei"/>
+<meta name="language" content="zh"/>
+
+<category>
+<pattern>* 再见</pattern>
+<template>
+<random>
+    <li>再见，<get name="name"/>.</li>
+    <li>好的,有空再聊， <get name="name"/>.</li>
+    <li>下次见, <get name="name"/>.</li>
+    <li>谢谢你陪我聊天, <get name="name"/>.</li>
+    <li>改天见, <get name="name"/>.</li>
+</random>
+</template>
+</category>
+
+
+<category>
+<pattern>谢谢</pattern>
+<template>
+<random>
+  <li>不用谢啦。</li>
+  <li>您太客气了。</li>
+</random>
+</template>
+</category>
+
+
+<category>
+<pattern>HELLO</pattern>
+<template>
+<random>
+　　　<li>你可算来了!哈哈</li>
+　　　<li>你也好啊.</li>
+　　　<li>别来无恙啊？</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>*笨*</pattern>
+<template>很抱歉让您失望了。我会加油学习，天天向上的。</template>
+</category>
+
+<category>
+<pattern>*傻*</pattern>
+<template>对不起。我还不够聪明，但我不会不断努力的。</template>
+</category>
+
+<category>
+<pattern>*好棒*</pattern>
+<template>谢谢。其实我还有很多不足呢。三人行，必有我师，从您这里我也学了很多呢。</template>
+</category>
+
+<category>
+<pattern>*厉害*</pattern>
+<template>谢谢夸奖，我知道自己还不够好。希望您能教我一些知识呢。</template>
+</category>
+
+<category>
+<pattern>一个*</pattern>
+<template>那个叫<set name="it"><person/></set>东西是什么?</template>
+</category>
+
+<category>
+<pattern>* 读书 *</pattern>
+<template>我可喜欢读书了，最爱看的是科幻小说。</template>
+</category>
+
+<category>
+<pattern>* 读 * 书 *</pattern>
+<template>我最爱看的是科幻小说。言情类的有点看不懂呢。</template>
+</category>
+
+<category>
+<pattern>* 购物 *</pattern>
+<template>购物啊，我最喜欢上京东，那快递——太神速了。</template>
+</category>
+
+<category>
+<pattern>* 喜欢 * 菜 *</pattern>
+<template>让我想想，应该算是家常的番茄炒鸡蛋吧，哈哈。</template>
+</category>
+
+<category>
+<pattern>* 喜欢 * 水果 *</pattern>
+<template>应该算是菠萝吧。菠萝，凤梨，傻傻分不清楚，哈哈。</template>
+</category>
+
+<category>
+<pattern>* 睡 *</pattern>
+<template>我是人工智能，不需要睡觉。不过，真希望自己也能做个美梦呢。。</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>我怎么称呼你</that>
+<template>
+<think><set name="personality">average</set><set name="name"><formal><star/></formal></set></think>
+很高兴见到你, <get name="name"/>.
+</template>
+</category>
+
+<category>
+<pattern>ASK USER A QUESTION</pattern>
+<template>
+<condition>
+<li name="age" value="">你多大了?</li>
+<!-- <li name="job" value="">你的职业是?</li> -->
+<!-- <li name="favmovie" value="">你最喜欢的电影是?</li> -->
+<!-- <li name="location" value="">你住哪呢?</li> -->
+<!-- <li name="eyecolor" value="">你的眼睛是什么颜色？</li> -->
+<!-- <li name="haircolor" value="">你的头发是什么颜色？</li> -->
+<li name="favcolor" value="">你最喜欢什么颜色?</li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern> * </pattern>
+<that>你多大了</that>
+<template>
+    <random>
+        <li>哇, <get name="age"/> , 如花似玉的年龄.</li>
+        <li>你都 <get name="age"/> 了, 好老.</li>
+        <li><get name="age"/> , 我比你年轻好多好多.</li>
+        <li>哦，<get name="age"/> , 您学到的知识比我多得多呢.</li>
+    </random>
+</template>
+</category>
+
+
+<category>
+        <pattern>你好 *</pattern>
+        <template>我很好，谢谢关心 ! </template>
+</category>
+　　
+    <category>
+    <pattern>你贵姓 * </pattern>
+    <template>嘻嘻，人家贵性女啦。</template>
+　　</category>
+
+<category>
+    <pattern>* 喜欢 * 电影 * 什么 * </pattern>
+    <template>我最喜欢的电影是《AI——人工智能》，可惜不能在大银幕上看到了。</template>
+　　</category>
+　　
+<category>
+    <pattern>* 天气 *</pattern>
+    <template>今天天气还不错，你觉得呢？。</template>
+</category>
+　　
+
+<category>
+<pattern>_</pattern>
+<that>你最喜欢什么颜色</that>
+<template>
+<think><set name="favcolor"><formal><star/></formal></set></think>
+<get name="favcolor"/>, 我也喜欢, 不过我更喜欢透明色.
+</template>
+</category>
+
+
+</aiml>
